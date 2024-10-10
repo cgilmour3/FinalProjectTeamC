@@ -14,3 +14,6 @@ def doctors(request):
     doctor = Doctor.objects.all()
     my_dict = {'mydoctors': doctor}
     return render(request, 'doctors.html', context=my_dict)
+
+def help(request):
+    return render(request, 'help.html')

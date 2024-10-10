@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +19,6 @@
             border-radius: 5px;
         }
 
-        table, tr, td{
-          border: 1px solid black;
-        }
      
     </style>
 </head>
@@ -50,27 +48,9 @@
 
     <div class="container">
     
-    <h1>Doctors--</h1>
-
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <td>First Name</td>
-          <td>Last Name</td>
-          <td>Specialty</td>
-          </tr>
-      </thead>
-      {% for i in mydoctors %}
-      <tr>
-        <td>{{i.doctor_fname}}</td>
-        <td>{{i.doctor_lname}}</td>
-        <td>{{i.doctor_specialty}}</td>
-       
-
-        
-      </tr>
-      {% endfor %}
-    </table>
+    <h1>Help--</h1>
+    <h3>Hospital Management System-Help</h3>
+    <p>Welcome to the Hospital Management System! To see your patients, navigate to the Patients page. If you wish to see doctors, navigate to the Doctors page.</p>
 
     </div>
 </body>
