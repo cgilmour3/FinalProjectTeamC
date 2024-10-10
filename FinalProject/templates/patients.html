@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,10 @@
             border-radius: 5px;
         }
 
-     
+        
+        table, tr, td{
+          border: 1px solid black;
+        }
     </style>
 </head>
 <body>
@@ -36,7 +40,7 @@
               <a class="nav-link" href="{% url 'patients' %}">Patients</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Doctors</a>
+              <a class="nav-link" href="{% url 'doctors' %}">Doctors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link warning" href="#">Help</a>
@@ -48,6 +52,57 @@
     <div class="container">
     
     <h1>Patients--</h1>
+
+    <!-- <table class="table">
+      <thead>
+        <tr>
+        <td>First Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Doctor</td>
+        </tr>
+      </thead>
+
+      {% for i in mypatients %}
+      <tr>
+        <td>{{i.patient_fname}}</td>
+        <td>{{i.patient_lname}}</td>
+        <td>{{i.patient_age}}</td>
+        <td>{{i.patient_gender}}</td>
+        <td>{{i.patient_doctor}}</td>
+
+        
+      </tr>
+      {% endfor %}
+    </table> -->
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Age</td>
+          <td>Gender</td>
+          <td>Doctor</td>
+          </tr>
+      </thead>
+      <tbody>
+         
+        {% for i in mypatients %}
+        <tr>
+          <td>{{i.patient_fname}}</td>
+          <td>{{i.patient_lname}}</td>
+          <td>{{i.patient_age}}</td>
+          <td>{{i.patient_gender}}</td>
+          <td>{{i.patient_doctor}}</td>
+  
+          
+        </tr>
+        {% endfor %}
+       
+      </tbody>
+    </table>
 
     </div>
 </body>

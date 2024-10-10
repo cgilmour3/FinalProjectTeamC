@@ -1,14 +1,16 @@
 from django.shortcuts import render
-
+from ProjectApp.models import Patient, Doctor, Specialist
 # Create your views here.
 def index(request):
 
     return render(request, 'index.html')
 
 def patients(request):
-    
-    return render(request, 'patients.html')
+    patient = Patient.objects.all()
+    my_doct = {'mypatients': patient}
+    return render(request, 'patients.html', context = my_doct)
 
 def doctors(request):
-
-    return render(request, 'doctors.html')
+    doctor = Doctor.objects.all()
+    my_dict = {'mydoctors': doctor}
+    return render(request, 'doctors.html', context=my_dict)
