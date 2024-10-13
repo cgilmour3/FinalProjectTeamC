@@ -7,16 +7,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>HMS</title>
     <style>
+        body, html{
+          font-family: 'Courier New', Courier, monospace;
+          height: 100%;
+          background: rgb(255,255,255);
+          background: linear-gradient(180deg, rgba(255,255,255,1) 9%, rgba(218,218,218,1) 46%, rgba(191,218,196,1) 85%);
+        }
         .container{
             margin: auto;
             margin-top: 2%;
-            width: 80%;
-            background-color: lightcyan;
+            width: 100%;
+            background-color: #4e7d56;
             text-align: center;
             min-height: 500px;
-            padding: auto;
-            border: 2px solid black;
+            padding: 20px;
+            border: 2px solid #054912;
             border-radius: 5px;
+      }
+        table{
+          width: 100%;
+          background-color: #ffffff;
+        }
+        thead{
+          height: 50px;
+          background-color: #215b2b;
+          color: #ffffff;
+          font-family: 'Courier New', Courier, monospace;
+        }
+        tr, td{
+          border: 1px solid #054912;
+          font-family: 'Courier New', Courier, monospace;
+        }
+        tr:nth-child(even){
+          background-color: #d5f0da;
+        }
+        h1{
+          font-weight: bold;
+          font-family: 'Courier New', Courier, monospace;
         }
 
         
@@ -51,7 +78,7 @@
 
     <div class="container">
     
-    <h1>Patients--</h1>
+    <h1>Patients</h1>
 
     <!-- <table class="table">
       <thead>
@@ -77,7 +104,7 @@
       {% endfor %}
     </table> -->
 
-    <table class="table table-striped">
+    <table>
       <thead>
         <tr>
           <td>First Name</td>
